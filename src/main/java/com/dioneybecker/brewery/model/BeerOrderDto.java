@@ -26,6 +26,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Builder.Default;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -39,14 +40,17 @@ public class BeerOrderDto {
     private UUID id = null;
 
     @JsonProperty("version")
+    @Default
     private Integer version = null;
 
     @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ", shape=JsonFormat.Shape.STRING)
     @JsonProperty("createdDate")
+    @Default
     private OffsetDateTime createdDate = null;
 
     @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ", shape=JsonFormat.Shape.STRING)
     @JsonProperty("lastModifiedDate")
+    @Default
     private OffsetDateTime lastModifiedDate = null;
 
     private UUID customerId;
