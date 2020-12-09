@@ -1,4 +1,4 @@
-package guru.sfg.beer.order.service;
+package com.dioneybecker.beerorderservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

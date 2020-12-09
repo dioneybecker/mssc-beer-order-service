@@ -26,6 +26,10 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [8081],
 
+	"mounts": [
+		"source=maven-repo,target=/root/.m2,type=volume,consistency=cached"
+	]
+
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar mssc-beer-service-0.0.1-SNAPSHOT.war"
 
